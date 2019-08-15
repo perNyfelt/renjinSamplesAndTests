@@ -44,6 +44,7 @@
          <groupId>org.renjin.cran</groupId>
          <artifactId>DBI</artifactId>
          <version>${dbi.version}</version>
+         <!-- uncomment the exclusions section make everything work -->
          <!--exclusions>
             <exclusion>
                <groupId>org.renjin</groupId>
