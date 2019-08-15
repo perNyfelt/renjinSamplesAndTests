@@ -20,7 +20,7 @@
 
    <properties>
       <!--renjin.version>0.9.2718</renjin.version-->
-      <renjin.version>RELEASE</renjin.version>
+      <renjin.version>3.5-beta64</renjin.version>
       <maven.compiler.source>1.8</maven.compiler.source>
       <maven.compiler.target>1.8</maven.compiler.target>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,6 +50,11 @@
          <version>1.7.25</version>
          <scope>test</scope>
       </dependency>
+      <dependency>
+         <groupId>org.renjin</groupId>
+         <artifactId>hamcrest</artifactId>
+         <version>${renjin.version}</version>
+      </dependency>
    </dependencies>
 
    <repositories>
@@ -75,10 +80,10 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.22.1</version>
             <configuration>
-               <testFailureIgnore>true</testFailureIgnore>
+               <testFailureIgnore>false</testFailureIgnore>
             </configuration>
          </plugin>
-         <!--plugin>
+         <plugin>
              <groupId>org.renjin</groupId>
              <artifactId>renjin-maven-plugin</artifactId>
              <version>${renjin.version}</version>
@@ -91,11 +96,11 @@
                      <phase>test</phase>
                  </execution>
              </executions>
-         </plugin-->
-         <plugin>
+         </plugin>
+         <!--plugin>
             <groupId>se.alipsa</groupId>
             <artifactId>renjin-hamcrest-maven-plugin</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.1</version>
             <configuration>
                <testFailureIgnore>true</testFailureIgnore>
                <printSuccess>true</printSuccess>
@@ -126,7 +131,7 @@
                   <version>${renjin.version}</version>
                </dependency>
             </dependencies>
-         </plugin>
+         </plugin-->
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
@@ -162,7 +167,7 @@
                </execution>
             </executions>
          </plugin>
-         <plugin>
+         <!--plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
             <version>2.22.1</version>
@@ -177,7 +182,7 @@
                   </goals>
                </execution>
             </executions>
-         </plugin>
+         </plugin-->
       </plugins>
    </build>
 </project>
