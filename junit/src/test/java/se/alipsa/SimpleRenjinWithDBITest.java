@@ -15,6 +15,11 @@ public class SimpleRenjinWithDBITest {
 
    Logger log = LoggerFactory.getLogger(SimpleRenjinWithDBITest.class);
 
+   /**
+    * here we see a nasty stacktrace being printed due to
+    * java.lang.NoClassDefFoundError: org/renjin/sexp/Environment$EmptyEnv
+    * but the code still works
+    */
    @Test
    public void testSimpleDBI() {
       RenjinScriptEngineFactory factory = new RenjinScriptEngineFactory();
@@ -33,6 +38,10 @@ public class SimpleRenjinWithDBITest {
    }
 
 
+   /**
+    * ...but as seen here, as soon as we try to
+    * do something involving graphics it fails.
+    */
    @Test
    public void testPlotToFile() {
       String script = "library(grDevices)\n" +

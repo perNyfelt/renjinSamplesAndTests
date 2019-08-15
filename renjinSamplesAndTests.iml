@@ -42,11 +42,11 @@
     <orderEntry type="library" name="Maven: org.renjin:renjin-gnur-runtime:3.5-beta64" level="project" />
     <orderEntry type="library" name="Maven: org.jfree:jfreesvg:3.3" level="project" />
     <orderEntry type="library" name="Maven: org.renjin:datasets:3.5-beta64" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.27" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.27" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-log4j12:1.7.25" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: log4j:log4j:1.2.17" level="project" />
-    <orderEntry type="library" name="Maven: org.renjin:hamcrest:3.5-beta64" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.renjin:hamcrest:3.5-beta64" level="project" />
   </component>
 </module>
