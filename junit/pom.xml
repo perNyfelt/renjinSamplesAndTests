@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <groupId>se.alipsa</groupId>
+      <artifactId>renjin-samples-and-tests</artifactId>
+      <version>1.0-SNAPSHOT</version>
+   </parent>
+
+   <artifactId>samples-junit</artifactId>
+   <packaging>jar</packaging>
+
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <dbi.version>1.0.0-b9</dbi.version>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
+   </properties>
+
+   <dependencies>
+      <dependency>
+         <groupId>com.microsoft.sqlserver</groupId>
+         <artifactId>mssql-jdbc</artifactId>
+         <version>7.4.1.jre8</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.testcontainers</groupId>
+         <artifactId>testcontainers</artifactId>
+         <version>1.12.0</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.testcontainers</groupId>
+         <artifactId>mssqlserver</artifactId>
+         <version>1.12.0</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.renjin.cran</groupId>
+         <artifactId>DBI</artifactId>
+         <version>${dbi.version}</version>
+         <!--exclusions>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>tcltk</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>methods</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>graphics</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>datasets</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>splines</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>grDevices</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>tools</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>stats</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>parallel</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>utils</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>grid</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.renjin</groupId>
+               <artifactId>stats4</artifactId>
+            </exclusion>
+         </exclusions-->
+      </dependency>
+   </dependencies>
+
+
+</project>

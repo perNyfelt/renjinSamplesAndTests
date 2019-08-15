@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.renjin:grDevices:3.5-beta64">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/renjin/grDevices/3.5-beta64/grDevices-3.5-beta64.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/renjin/grDevices/3.5-beta64/grDevices-3.5-beta64-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/renjin/grDevices/3.5-beta64/grDevices-3.5-beta64-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
