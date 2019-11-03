@@ -86,5 +86,25 @@ or you may need to experiment a bit.
 
 You can also ask for help on the mailing list (renjin-dev@googlegroups.com).
 
+# Using the package
+
+Add the follwing dependecy to your pom.xml
+
+    <dependency>
+      <groupId>se.alipsa</groupId>
+      <artifactId>ctsmr</artifactId>
+      <version>0.6.17<</version>
+    </dependency>
+
+The you can use it in the renjin script engine just like in GNU R e.g:
+
+    library("se.alipsa:ctsmr")
+    
+    model <- ctsm()
+    model$addSystem(dx ~ theta * (b - x) * dt + exp(sigma)*dw1)
+    model$addObs(y ~ x)
+    model$setVariance(yy ~ exp(S))
+    print(model)
+
 
 
