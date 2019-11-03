@@ -15,8 +15,10 @@
 
    <modules>
       <module>jackson</module>
-      <module>junit</module>
+      <!--module>junit</module-->
      <module>aetherdownloads</module>
+     <module>charsequence</module>
+      <module>ctsmr</module>
    </modules>
 
    <properties>

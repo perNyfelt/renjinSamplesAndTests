@@ -14,26 +14,26 @@
          <artifactId>methods</artifactId>
          <version>${renjin.version}</version>
       </dependency>
-      <dependency>
+      <!--dependency>
          <groupId>org.renjin</groupId>
          <artifactId>datasets</artifactId>
          <version>${renjin.version}</version>
-      </dependency>
-      <dependency>
+      </dependency-->
+      <!--dependency>
          <groupId>org.renjin</groupId>
          <artifactId>stats</artifactId>
          <version>${renjin.version}</version>
-      </dependency>
-      <dependency>
+      </dependency-->
+      <!--dependency>
          <groupId>org.renjin</groupId>
          <artifactId>grDevices</artifactId>
          <version>${renjin.version}</version>
-      </dependency>
-      <dependency>
+      </dependency-->
+      <!--dependency>
          <groupId>org.renjin</groupId>
          <artifactId>stats4</artifactId>
          <version>${renjin.version}</version>
-      </dependency>
+      </dependency-->
       <dependency>
          <groupId>org.renjin</groupId>
          <artifactId>tools</artifactId>
@@ -44,11 +44,11 @@
          <artifactId>utils</artifactId>
          <version>${renjin.version}</version>
       </dependency>
-      <dependency>
+      <!--dependency>
          <groupId>org.renjin</groupId>
          <artifactId>graphics</artifactId>
          <version>${renjin.version}</version>
-      </dependency>
+      </dependency-->
       <dependency>
          <groupId>org.renjin</groupId>
          <artifactId>compiler</artifactId>
@@ -84,14 +84,14 @@
                   <configuration>
                      <sourceDirectory>${basedir}/R</sourceDirectory>
                      <dataDirectory>${basedir}/data</dataDirectory>
-                     <defaultPackages>
+                     <!--defaultPackages>
                         <package>methods</package>
                         <package>stats</package>
                         <package>utils</package>
                         <package>grDevices</package>
                         <package>graphics</package>
                         <package>datasets</package>
-                     </defaultPackages>
+                     </defaultPackages-->
                   </configuration>
                </execution>
                <execution>
@@ -103,14 +103,14 @@
                   <configuration>
                      <timeoutInSeconds>30</timeoutInSeconds>
                      <testSourceDirectory>${basedir}/tests</testSourceDirectory>
-                     <defaultPackages>
+                     <!--defaultPackages>
                         <package>methods</package>
                         <package>stats</package>
                         <package>utils</package>
                         <package>grDevices</package>
                         <package>graphics</package>
                         <package>datasets</package>
-                     </defaultPackages>
+                     </defaultPackages-->
                   </configuration>
                </execution>
                <execution>
