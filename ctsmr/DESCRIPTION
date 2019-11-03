@@ -1,0 +1,15 @@
+Package: ctsmr
+Type: Package
+Title: CTSM for R
+Version: 0.6.17
+Date: 2018-08-26
+Author: Rune Juhl
+Maintainer: Rune Juhl <ruju@dtu.dk>
+Description: Continuous Time Stochastic Modelling for R.
+License: BSD
+Depends: R (>= 2.15.0), stats, methods
+LazyLoad: Yes
+ByteCompile: No
+RoxygenNote: 6.0.1
+NeedsCompilation: yes
+Packaged: 2018-08-26 21:04:11 UTC; ruju

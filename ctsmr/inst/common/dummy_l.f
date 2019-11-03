@@ -1,0 +1,58 @@
+c
+c This file contains dummy functions for the jacobians used
+c by the extended Kalman filter.
+c 
+      SUBROUTINE FVECXJ(XM,XP,UO,T,JACOB,F,NPARAM,N,M)
+      INTEGER NPARAM,N,M
+      DOUBLE PRECISION XM(NPARAM),XP(N),UO(M),T,JACOB(N,N),F(N)
+      INTEGER I,J
+      DO 10 I=1,N
+         F(I)=0.0D0
+  10  CONTINUE
+      DO 15 I=1,N
+      DO 20 J=1,N
+         JACOB(J,I)=0.0D0
+  20  CONTINUE
+  15  CONTINUE
+      RETURN
+      END
+c
+      SUBROUTINE FVECUJ(XM,XP,UO,T,JACOB,NPARAM,N,M)
+      INTEGER NPARAM,N,M
+      DOUBLE PRECISION XM(NPARAM),XP(N),UO(M),T,JACOB(N,M)
+      INTEGER I,J
+      DO 15 I=1,M
+      DO 20 J=1,N
+         JACOB(J,I)=0.0D0
+  20  CONTINUE
+  15  CONTINUE
+      RETURN
+      END
+c
+      SUBROUTINE HVECXJ(XM,XP,UO,T,JACOB,H,NPARAM,N,M,S)
+      INTEGER NPARAM,N,M,S
+      DOUBLE PRECISION XM(NPARAM),XP(N),UO(M),T,JACOB(S,N),H(S)
+      INTEGER I,J
+      DO 10 I=1,S
+         H(I)=0.0D0
+  10  CONTINUE
+      DO 15 I=1,N
+      DO 20 J=1,S
+         JACOB(J,I)=0.0D0
+  20  CONTINUE
+  15  CONTINUE
+      RETURN
+      END
+c
+      SUBROUTINE HVECUJ(XM,XP,UO,T,JACOB,NPARAM,N,M,S)
+      INTEGER NPARAM,N,M,S
+      DOUBLE PRECISION XM(NPARAM),XP(N),UO(M),T,JACOB(S,M)
+      INTEGER I,J
+      DO 15 I=1,M
+      DO 20 J=1,S
+         JACOB(J,I)=0.0D0
+  20  CONTINUE
+  15  CONTINUE
+      RETURN
+      END
+

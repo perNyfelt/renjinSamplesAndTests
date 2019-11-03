@@ -1,0 +1,14 @@
+
+all: libctsmr.a compile_llike_win
+
+PKG_LIBS    += $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) "windows/llike_win.o"
+
+libctsmr.a: $(OBJECTS)
+
+# This is a hack to satisfy the linker on Windows while creating the dll - which we don't use.
+compile_llike_win: windows/llike_win.o
+
+clean:
+	rm -f $(OBJECTS) $(SHLIB) libctsmr.a
+
+.PHONY: all clean

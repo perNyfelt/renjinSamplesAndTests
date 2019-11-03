@@ -1,0 +1,13 @@
+
+all: libctsmr.a 
+
+PKG_LIBS    = $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
+
+libctsmr.a: 	$(OBJECTS)
+		$(AR) qc $@ $^
+		@if test -n "$(RANLIB)"; then $(RANLIB) $@; fi
+
+clean:
+		rm -f $(OBJECTS) $(SHLIB) libctsmr.a
+
+.PHONY: 	all clean

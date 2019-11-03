@@ -1,0 +1,39 @@
+2014-03-10 Rune Juhl <ruju@dtu.dk>
+
+Changes in 0.6.8
+
+   - Various bug fixes.
+
+   - Constant or varying samplingtime is determined automatically.
+   - The full initial covariance matrix can be set in predict.ctsmr.
+
+2013-04-17 Rune Juhl <ruju@dtu.dk>
+
+Changes in 0.6.6-2
+
+   - Two bugs fixed.
+
+2013-04-16 Rune Juhl <ruju@dtu.dk>
+
+Changes in 0.6.6
+
+   - Infomation about the model is now printed. Try model <- ctsm$new(); model
+
+2013-04-16 Rune Juhl <ruju@dtu.dk>
+
+Changes in 0.6.5
+
+   - Fixed regression from 0.6.4.
+   - Fixed bug for LTI systems without inputs.
+
+2013-04-15 Rune Juhl <ruju@dtu.dk>
+
+Changes in 0.6.4
+
+   - Fixed incorrect detection of systems with input dependent diffusion or observation noise.
+
+2013-04-11 Rune Juhl <ruju@dtu.dk>
+
+Changes in 0.6.3
+
+   - Fixed incompatibilities with R 3.0.0
