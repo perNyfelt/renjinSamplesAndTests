@@ -19,11 +19,15 @@
      <module>aetherdownloads</module>
      <module>charsequence</module>
       <module>ctsmr</module>
+      <module>ctsmr-example</module>
+      <module>helloworld</module>
+      <module>java-r6</module>
+      <module>java-rc</module>
    </modules>
 
    <properties>
       <!--renjin.version>0.9.2718</renjin.version-->
-      <renjin.version>3.5-beta65</renjin.version>
+      <renjin.version>3.5-beta76</renjin.version>
       <maven.compiler.source>1.8</maven.compiler.source>
       <maven.compiler.target>1.8</maven.compiler.target>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

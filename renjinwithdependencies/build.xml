@@ -1,0 +1,41 @@
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="renjinwithdependencies" default="resolve" basedir=".">
+
+   <property name="srcDir" value="${basedir}/src" />
+   <property name="libDir" value="${basedir}/lib" />
+   <property name="outDir" value="${basedir}/out" />
+
+   <target name="init">
+      <mkdir dir="${libDir}" />
+      <delete dir="${libDir}" includes="*" />
+      <mkdir dir="${outDir}" />
+      <delete dir="${outDir}" includes="**/*" />
+   </target>
+
+   <target name="resolve" depends="init" description="--> retrieve dependencies with Ivy">
+      <!--ivy:cleancache/-->
+      <ivy:configure file="${basedir}/ivysettings.xml" />
+      <ivy:resolve file="${basedir}/ivy.xml" />
+      <ivy:retrieve type="jar" pattern="${libDir}/[artifact]-[revision](-[classifier]).[ext]" conf="*" />
+   </target>
+
+   <target name="classpath" depends="resolve">
+      <path id="libClasspath">
+         <fileset dir="${libDir}" includes="*.jar"/>
+      </path>
+   </target>
+
+   <target name="compile" depends="classpath">
+      <javac srcdir="src" destdir="out" classpathref="libClasspath" includeantruntime="false"/>
+   </target>
+
+   <target name="run" depends="compile" description="--> Run the SimpleTest">
+      <java classname="se.alipsa.SimpleTest">
+         <classpath>
+            <fileset dir="lib">
+               <include name="**/*.jar"/>
+            </fileset>
+            <pathelement location="${outDir}"/>
+         </classpath>
+      </java>
+   </target>
+</project>

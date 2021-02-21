@@ -1,0 +1,6 @@
+<ivy-module version="2.0">
+   <info organisation="se.alipsa" module="renjinwithdependencies"/>
+   <dependencies>
+      <dependency org="org.renjin" name="renjin-script-engine" rev="3.5-beta76" conf="*->*,!sources,!javadoc"/>
+   </dependencies>
+</ivy-module>

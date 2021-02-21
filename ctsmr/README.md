@@ -1,5 +1,4 @@
-Overview
-========
+# Overview
 
 This is an example of how to "port" a GNU R package to Renjin R.
 
@@ -11,7 +10,7 @@ In essence two files are needed in addition to the GNU R ctsmr package:
 1. A pom.xml file that calls the renjin maven plugin
 1. A Vagrant file similar to the one use to build the Renjin project itself to get the right versions of gcc etc. so that the renjin maven plugin can process the c and fortran sources. 
 
-# Relevant links
+### Relevant links
 - <https://stackoverflow.com/questions/39333462/automated-porting-of-r-library-for-renjin>
 - <http://ctsm.info/>
 
@@ -48,10 +47,10 @@ for Renjin's C/Fortran compile step.
 Install Vagrant from https://www.vagrantup.com and then run the following
 from the root of the Renjin git repository that calls the
 [Vagrantfile](Vagrantfile):
-
+```
     vagrant up
     vagrant ssh -c "cd /home/ubuntu/renjin && ./mvn clean install"
-
+```
 Vagrant configures a shared directory on the VirtualBox guest machine
 that includes the Renjin repository, so once the initial build
 is complete you can work normally from your IDE on your own (host) machine.
@@ -71,11 +70,11 @@ as normal.
 You can install the required tools through the APT package manager. 
 A 64-bit architecture is required.
 
-    sudo apt-get install openjdk-8-jdk make gcc-4.7 gcc-4.7-plugin-dev gfortran-4.7 g++-4.7 gcc-4.7.multilib g++-4.7-multilib libz-dev
+    `sudo apt-get install openjdk-8-jdk make gcc-4.7 gcc-4.7-plugin-dev gfortran-4.7 g++-4.7 gcc-4.7.multilib g++-4.7-multilib libz-dev`
 
 Then build:
 
-    mvn clean install
+    `mvn clean install`
 
 From the root of the project.
 
@@ -84,20 +83,23 @@ From the root of the project.
 For other platforms, consider using Vagrant to bootstrap your build,
 or you may need to experiment a bit. 
 
-You can also ask for help on the mailing list (renjin-dev@googlegroups.com).
+You can also ask for help on the [mailing list] (renjin-dev@googlegroups.com).
 
-# Using the package
+## Using the package
 
 Add the follwing dependecy to your pom.xml
 
+```
     <dependency>
       <groupId>se.alipsa</groupId>
       <artifactId>ctsmr</artifactId>
-      <version>0.6.17<</version>
+      <version>0.6.17</version>
     </dependency>
+```
 
 The you can use it in the renjin script engine just like in GNU R e.g:
 
+```
     library("se.alipsa:ctsmr")
     
     model <- ctsm()
@@ -105,6 +107,5 @@ The you can use it in the renjin script engine just like in GNU R e.g:
     model$addObs(y ~ x)
     model$setVariance(yy ~ exp(S))
     print(model)
-
-
+```
 
