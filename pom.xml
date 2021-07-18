@@ -10,7 +10,7 @@
    <version>1.0-SNAPSHOT</version>
    <name>Package tests for renjin</name>
    <description>various examples and test code for renjin</description>
-
+   <url>https://github.com/perNyfelt/renjinSamplesAndTests</url>
    <packaging>pom</packaging>
 
    <modules>
@@ -18,11 +18,14 @@
       <!--module>junit</module-->
      <module>aetherdownloads</module>
      <module>charsequence</module>
-      <module>ctsmr</module>
-      <module>ctsmr-example</module>
-      <module>helloworld</module>
-      <module>java-r6</module>
-      <module>java-rc</module>
+     <!-- ctsmr requires using the gcc bridgenad gcc 4.7 so must be run inside vagrant
+     <module>ctsmr</module>
+     <module>ctsmr-example</module>
+     -->
+     <module>helloworld</module>
+     <module>java-r6</module>
+     <module>java-rc</module>
+     <module>s4/studentS4</module>
    </modules>
 
    <properties>
@@ -43,17 +46,17 @@
       <dependency>
          <groupId>org.slf4j</groupId>
          <artifactId>slf4j-api</artifactId>
-         <version>1.7.27</version>
+         <version>1.7.31</version>
       </dependency>
       <dependency>
          <groupId>org.slf4j</groupId>
          <artifactId>slf4j-log4j12</artifactId>
-         <version>1.7.27</version>
+         <version>1.7.31</version>
       </dependency>
       <dependency>
          <groupId>junit</groupId>
          <artifactId>junit</artifactId>
-         <version>4.13.1</version>
+         <version>4.13.2</version>
          <scope>test</scope>
       </dependency>
       <dependency>
@@ -69,6 +72,15 @@
          <id>bedatadriven</id>
          <name>bedatadriven public repo</name>
          <url>https://nexus.bedatadriven.com/content/groups/public/</url>
+      </repository>
+      <repository>
+        <id>central</id>
+        <name>Central Repository</name>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <layout>default</layout>
+        <snapshots>
+          <enabled>false</enabled>
+        </snapshots>
       </repository>
    </repositories>
 
