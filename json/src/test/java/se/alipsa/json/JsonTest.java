@@ -60,7 +60,7 @@ public class JsonTest {
 
     SEXP jobj = null;
     try {
-      jobj = (SEXP)engine.eval("library('org.renjin.cran:jsonify'); to_json(to_json)");
+      jobj = (SEXP)engine.eval("library('org.renjin.cran:jsonify'); to_json(robj)");
       System.out.println(jobj.asString());
     } catch (EvalException e) {
       e.printStackTrace();

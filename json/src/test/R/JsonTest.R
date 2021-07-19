@@ -22,10 +22,10 @@ test.jsonlite <- function() {
 }
 
 # NOT WORKING
-test.jsonify <- function() {
-  robj <- readRDS("robj.rds")
-  library('org.renjin.cran:jsonify')
-  jobj <- to_json(robj)
-  print(jobj)
-  detach("package:jsonify", unload=TRUE) # only half working in renjin
-}
+#test.jsonify <- function() {
+#  robj <- readRDS("robj.rds")
+#  library('org.renjin.cran:jsonify')
+#  jobj <- to_json(robj)
+#  print(jobj)
+#  detach("package:jsonify", unload=TRUE) # only half working in renjin
+#}
