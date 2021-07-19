@@ -38,4 +38,13 @@
          </classpath>
       </java>
    </target>
+
+   <target name="clean" description="--> Clean up any downloaded or compiled files">
+      <delete>
+         <fileset dir="." includes="*.tar.gz"/>
+      </delete>
+      <delete dir="apache-ivy-2.5.0"/>
+      <delete dir="out" />
+      <delete dir="lib" />
+   </target>
 </project>

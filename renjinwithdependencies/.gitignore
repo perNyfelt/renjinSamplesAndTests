@@ -1,0 +1,4 @@
+apache-ivy-2.5.0
+*.gz
+lib/
+out/
