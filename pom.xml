@@ -26,7 +26,7 @@
         <module>java-r6</module>
         <module>java-rc</module>
         <module>s4/studentS4</module>
-        <module>beans/beanSample</module>
+        <module>beans</module>
     </modules>
 
     <properties>
