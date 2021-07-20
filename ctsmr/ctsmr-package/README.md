@@ -64,7 +64,7 @@ from the root of the Renjin git repository that calls the
 [Vagrantfile](Vagrantfile):
 ```
     vagrant up
-    vagrant ssh -c "cd /home/ubuntu/renjin && mvn clean install"
+    vagrant ssh -c "cd /home/ubuntu/renjin && mvn -f vagrantpom.xml clean install"
 ```
 Vagrant configures a shared directory on the VirtualBox guest machine
 that includes the Renjin repository, so once the initial build

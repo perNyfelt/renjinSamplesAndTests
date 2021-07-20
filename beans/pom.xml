@@ -10,9 +10,8 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <!-- general information about your package -->
   <name>beans</name>
-  <description>TODO: write a short description here</description>
+  <description>Showing the beans "special sauce" functionality of Renjin</description>
 
   <modules>
     <module>beanSample</module>
