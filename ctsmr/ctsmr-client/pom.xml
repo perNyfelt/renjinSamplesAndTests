@@ -11,7 +11,7 @@
   <packaging>jar</packaging>
 
   <!-- general information about your package -->
-  <name>ctsmr-example</name>
+  <name>ctsmr-client</name>
   <description>Example usage of the converted ctsmr package</description>
 
   <properties>
@@ -99,11 +99,11 @@
     <plugins>
       <plugin>
         <groupId>se.alipsa</groupId>
-        <artifactId>renjin-hamcrest-maven-plugin</artifactId>
-        <version>1.2</version>
+        <artifactId>renjin-test-maven-plugin</artifactId>
+        <version>1.3.5</version>
         <configuration>
           <testFailureIgnore>false</testFailureIgnore>
-          <runSourceScriptsBeforeTests>true</runSourceScriptsBeforeTests>
+          <runSourceScriptsBeforeTests>false</runSourceScriptsBeforeTests>
         </configuration>
         <executions>
           <execution>
@@ -144,11 +144,4 @@
       </plugin>
     </plugins>
   </build>
-  <!-- TODO: uncomment this and add the real url if you have a repository to deploy to -->
-  <!--distributionManagement>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://some.server:8081/nexus/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement-->
 </project>

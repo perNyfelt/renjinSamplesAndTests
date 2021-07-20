@@ -16,10 +16,25 @@ In essence two files are needed in addition to the GNU R ctsmr package:
 
 Setup
 =====
+Note: the below steps have already been performed
+
 1. Read version from http://ctsm.info/repo/dev/src/contrib/PACKAGES
 1. download http://ctsm.info/repo/dev/src/contrib/ctsmr_${version}.tar.gz
+    e.g. `wget http://ctsm.info/repo/dev/src/contrib/ctsmr_0.6.17.tar.gz`
 1. unpack the source code to the project root
-
+    e.g. `tar zxv ctsmr_0.6.17.tar.gz`
+1. Add a pom.xml file. The key to compile the c code into java bytecode is
+    the following section in the renjin-maven-plugin:
+   ```xml
+   <execution>
+      <id>gnur-compile</id>
+      <phase>compile</phase>
+      <goals>
+         <goal>gnur-compile</goal>
+      </goals>
+   </execution>
+   ```
+   See the pom.xml for more details.
 
 Building the package
 =====================
@@ -49,7 +64,7 @@ from the root of the Renjin git repository that calls the
 [Vagrantfile](Vagrantfile):
 ```
     vagrant up
-    vagrant ssh -c "cd /home/ubuntu/renjin && ./mvn clean install"
+    vagrant ssh -c "cd /home/ubuntu/renjin && mvn clean install"
 ```
 Vagrant configures a shared directory on the VirtualBox guest machine
 that includes the Renjin repository, so once the initial build
@@ -87,7 +102,7 @@ You can also ask for help on the [mailing list] (renjin-dev@googlegroups.com).
 
 ## Using the package
 
-Add the follwing dependecy to your pom.xml
+Add the following dependency to your pom.xml
 
 ```
     <dependency>
@@ -97,7 +112,7 @@ Add the follwing dependecy to your pom.xml
     </dependency>
 ```
 
-The you can use it in the renjin script engine just like in GNU R e.g:
+Then you can use it in the Renjin just like in GNU R e.g:
 
 ```
     library("se.alipsa:ctsmr")
@@ -107,5 +122,18 @@ The you can use it in the renjin script engine just like in GNU R e.g:
     model$addObs(y ~ x)
     model$setVariance(yy ~ exp(S))
     print(model)
+```
+
+outputs:
+
+```
+Loading required package: stats
+Loading required package: methods
+Linear state space model with 1 state, 1 output and 0 input
+System equations:
+	dx ~ theta * (b - x) * dt + exp(sigma) * dw1
+Observation equations:
+	y ~ x
+No inputs.
 ```
 
