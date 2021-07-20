@@ -16,5 +16,6 @@
 
   <modules>
     <module>beanSample</module>
+    <module>bean-sample-client</module>
   </modules>
 </project>

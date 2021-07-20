@@ -2,8 +2,8 @@ library('hamcrest')
 library('se.alipsa:beanSample')
 
 test.beanSample <- function() {
-  bob <- addCustomer(name = "Bob", age = 36)
-  carol <- addCustomer(name = "Carol", age = 41)
+  addCustomer(name = "Bob", age = 36)
+  addCustomer(name = "Carol", age = 41)
   assertThat(length(getCustomerList()), equalTo(2))
   
   assertThat(getCustomerList()[[1]]$name, equalTo("Bob"))
@@ -11,6 +11,7 @@ test.beanSample <- function() {
 }
 
 test.getterStillWorks <- function() {
+  # We can create and add stuff to a java Map as an alternative to using R list()
   import(java.util.HashMap)
   ageMap <- HashMap$new()
   bobby <- createCustomer(name = "Bobby", age = 26)

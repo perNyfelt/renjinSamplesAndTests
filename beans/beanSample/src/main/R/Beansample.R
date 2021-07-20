@@ -1,8 +1,12 @@
-# remember to add export(function name) to NAMESPACE to make them available
+#
 customerList <- list()
 
 getCustomerList <- function() {
   return(customerList)
+}
+
+resetCustomerList <- function() {
+  customerList <<- list()
 }
 
 createCustomer <- function(name, age) {
@@ -11,8 +15,8 @@ createCustomer <- function(name, age) {
 }
 
 addCustomer <- function(name, age) {
-  # add to global var
   customer <- createCustomer(name, age)
+  # add to global list
   customerList <<- c(customerList, customer)
   return(customer)
 }

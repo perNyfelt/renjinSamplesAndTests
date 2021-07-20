@@ -2,4 +2,4 @@
 # which functions the package exposes (i.e. exports) to other packages
 # see http://docs.renjin.org/en/latest/writing-renjin-extensions.html for details about the syntax
 
-export(createCustomer, getCustomerList, addCustomer)
+export(createCustomer, addCustomer, getCustomerList, resetCustomerList)
