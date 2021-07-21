@@ -59,13 +59,13 @@
    </dependencies>
    <repositories>
       <repository>
-         <id>bedatadriven-public</id>
+         <id>bedatadriven</id>
          <url>https://nexus.bedatadriven.com/content/groups/public/</url>
       </repository>
    </repositories>
    <pluginRepositories>
       <pluginRepository>
-         <id>bedatadriven-public</id>
+         <id>bedatadriven</id>
          <url>https://nexus.bedatadriven.com/content/groups/public/</url>
       </pluginRepository>
    </pluginRepositories>
