@@ -130,6 +130,26 @@
                </dependency>
             </dependencies>
          </plugin>
+        <plugin>
+          <!-- the gcc-bridge compiles into the src dir so we need to extend the clean target to get the
+          compiled files clean out from there as well -->
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+          <configuration>
+            <filesets>
+              <fileset>
+                <directory>src</directory>
+                <includes>
+                  <include>**/*.so</include>
+                  <include>**/*.a</include>
+                  <include>**/*.gimple</include>
+                  <include>**/*.o</include>
+                </includes>
+                <followSymlinks>false</followSymlinks>
+              </fileset>
+            </filesets>
+          </configuration>
+        </plugin>
       </plugins>
    </build>
 </project>

@@ -67,7 +67,7 @@ from the root of the Renjin git repository that calls the
     vagrant ssh -c "cd /home/ubuntu/renjin && mvn -f vagrantpom.xml clean install"
 ```
 Vagrant configures a shared directory on the VirtualBox guest machine
-that includes the Renjin repository, so once the initial build
+that includes the Renjin repository, as well as mapping the .m2 dir to your ~/.m2 so once the initial build
 is complete you can work normally from your IDE on your own (host) machine.
 
 Note that this requires that your host machine has a *case-sensitive* 

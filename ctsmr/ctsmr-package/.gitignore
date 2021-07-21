@@ -1,3 +1,4 @@
 src/*.so
 src/*.a
 src/*.gimple
+src/*.o
