@@ -13,18 +13,6 @@
     <url>https://github.com/perNyfelt/renjinSamplesAndTests</url>
     <packaging>pom</packaging>
 
-    <modules>
-        <!--module>junit</module-->
-        <module>aetherdownloads</module>
-        <module>charsequence</module>
-        <module>ctsmr</module>
-        <module>helloworld</module>
-        <module>java-r6</module>
-        <module>java-rc</module>
-        <module>s4/studentS4</module>
-        <module>beans</module>
-    </modules>
-
     <properties>
         <!--renjin.version>0.9.2718</renjin.version-->
         <renjin.version>3.5-beta76</renjin.version>
@@ -155,4 +143,37 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>full-build</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <!--module>junit</module-->
+                <module>aetherdownloads</module>
+                <module>charsequence</module>
+                <module>ctsmr</module>
+                <module>helloworld</module>
+                <module>java-r6</module>
+                <module>java-rc</module>
+                <module>s4/studentS4</module>
+                <module>beans</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>no-vagrant</id>
+            <modules>
+                <!--module>junit</module-->
+                <module>aetherdownloads</module>
+                <module>charsequence</module>
+                <module>helloworld</module>
+                <module>java-r6</module>
+                <module>java-rc</module>
+                <module>s4/studentS4</module>
+                <module>beans</module>
+            </modules>
+        </profile>
+    </profiles>
 </project>
