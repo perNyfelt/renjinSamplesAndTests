@@ -122,13 +122,6 @@
                   </goals>
                </execution>
             </executions>
-            <dependencies>
-               <dependency>
-                  <groupId>org.renjin.cran</groupId>
-                  <artifactId>codetools</artifactId>
-                  <version>0.2-16-b1</version>
-               </dependency>
-            </dependencies>
          </plugin>
         <plugin>
           <!-- the gcc-bridge compiles into the src dir so we need to extend the clean target to get the
