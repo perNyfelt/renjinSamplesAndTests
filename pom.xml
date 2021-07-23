@@ -153,13 +153,14 @@
             <modules>
                 <!--module>junit</module-->
                 <module>aetherdownloads</module>
-                <module>charsequence</module>
+                <module>beans</module>
                 <module>ctsmr</module>
                 <module>helloworld</module>
                 <module>java-r6</module>
                 <module>java-rc</module>
+                <module>json</module>
                 <module>s4/studentS4</module>
-                <module>beans</module>
+                <module>RefrenceClasses</module>
             </modules>
         </profile>
         <profile>
@@ -167,12 +168,13 @@
             <modules>
                 <!--module>junit</module-->
                 <module>aetherdownloads</module>
-                <module>charsequence</module>
+                <module>beans</module>
                 <module>helloworld</module>
+                <module>RefrenceClasses</module>
+                <module>s4/studentS4</module>
                 <module>java-r6</module>
                 <module>java-rc</module>
-                <module>s4/studentS4</module>
-                <module>beans</module>
+                <module>json</module>
             </modules>
         </profile>
     </profiles>
