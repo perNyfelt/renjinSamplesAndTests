@@ -156,11 +156,12 @@
                 <module>beans</module>
                 <module>ctsmr</module>
                 <module>helloworld</module>
+                <module>s4/studentS4</module>
+                <module>ReferenceClasses</module>
                 <module>java-r6</module>
                 <module>java-rc</module>
+                <module>singleton</module>
                 <module>json</module>
-                <module>s4/studentS4</module>
-                <module>RefrenceClasses</module>
             </modules>
         </profile>
         <profile>
@@ -170,10 +171,11 @@
                 <module>aetherdownloads</module>
                 <module>beans</module>
                 <module>helloworld</module>
-                <module>RefrenceClasses</module>
+                <module>ReferenceClasses</module>
                 <module>s4/studentS4</module>
                 <module>java-r6</module>
                 <module>java-rc</module>
+                <module>singleton</module>
                 <module>json</module>
             </modules>
         </profile>

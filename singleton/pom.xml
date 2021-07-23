@@ -93,6 +93,11 @@
     </resources>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+      </plugin>
+      <plugin>
         <groupId>se.alipsa</groupId>
         <artifactId>renjin-hamcrest-maven-plugin</artifactId>
         <version>1.2</version>
@@ -139,11 +144,4 @@
       </plugin>
     </plugins>
   </build>
-  <!-- TODO: uncomment this and add the real url if you have a repository to deploy to -->
-  <!--distributionManagement>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://some.server:8081/nexus/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement-->
 </project>

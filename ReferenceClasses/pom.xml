@@ -6,12 +6,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>se.alipsa</groupId>
-  <artifactId>RefrenceClasses</artifactId>
+  <artifactId>ReferenceClasses</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <!-- general information about your package -->
-  <name>RefrenceClasses</name>
+  <name>ReferenceClasses</name>
   <description>TODO: write a short description here</description>
 
   <properties>
@@ -47,12 +47,6 @@
 	<artifactId>codetools</artifactId>
 	<version>0.2-16-b1</version>
     </dependency>
-    <!-- uncomment this to enable GUi interaction from R code (e.g. View)-->
-    <!--dependency>
-      <groupId>se.alipsa</groupId>
-      <artifactId>rideutils</artifactId>
-      <version>1.0</version>
-    </dependency-->
 
     <!-- the hamcrest package is only required if you use it for unit tests -->
     <dependency>
@@ -150,11 +144,4 @@
       </plugin>
     </plugins>
   </build>
-  <!-- TODO: uncomment this and add the real url if you have a repository to deploy to -->
-  <!--distributionManagement>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://some.server:8081/nexus/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement-->
 </project>

@@ -7,7 +7,7 @@ of running a renjin powered program.
 ## Prerequisites
 ant and ivy installed
 
-there is a convenience script to install ivy if you dont have that already (installIvy.sh)
+there is a convenience script to install ivy if you don't have that already (installIvy.sh)
 
 ## Build and run
 `ant run`
